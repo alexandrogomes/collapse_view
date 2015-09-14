@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Send View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="SendViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8w-r3-5bK" userLabel="OptionsCameraView">
+                                <rect key="frame" x="16" y="220" width="568" height="300"/>
+                                <color key="backgroundColor" red="0.17348429597787141" green="0.21141047158774084" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzk-Ba-bhf" userLabel="GreyView">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avD-aq-7ZW">
+                                        <rect key="frame" x="277" y="135" width="46" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="avD-aq-7ZW" secondAttribute="bottom" constant="145" id="MVA-EI-WIp"/>
+                                    <constraint firstAttribute="height" constant="320" id="Nf8-FU-I9Y"/>
+                                    <constraint firstAttribute="centerY" secondItem="avD-aq-7ZW" secondAttribute="centerY" id="SCZ-cG-bNs"/>
+                                    <constraint firstAttribute="centerX" secondItem="avD-aq-7ZW" secondAttribute="centerX" id="c3v-L9-0gR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nf8-FU-I9Y"/>
+                                        <exclude reference="MVA-EI-WIp"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmG-2u-BDv">
+                                <rect key="frame" x="277" y="135" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionCollapse:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4wV-VN-J0e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28725571259999999" green="0.44336498569999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="p8w-r3-5bK" secondAttribute="bottom" constant="80" id="Fbz-q5-aMg"/>
+                            <constraint firstItem="p8w-r3-5bK" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.5" id="NyN-hO-Opi"/>
+                            <constraint firstAttribute="centerY" secondItem="LmG-2u-BDv" secondAttribute="centerY" multiplier="2" id="ZhS-Oa-ejw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="p8w-r3-5bK" secondAttribute="bottom" id="giV-Gs-Ept"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fzk-Ba-bhf" secondAttribute="bottom" id="jW8-kM-HZC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fzk-Ba-bhf" secondAttribute="trailing" constant="-16" id="nel-Ds-zsy"/>
+                            <constraint firstItem="p8w-r3-5bK" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ow9-UW-kRD"/>
+                            <constraint firstAttribute="centerX" secondItem="LmG-2u-BDv" secondAttribute="centerX" id="p1f-IC-fce"/>
+                            <constraint firstItem="p8w-r3-5bK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="pNf-cP-gFA"/>
+                            <constraint firstItem="fzk-Ba-bhf" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.5" id="tip-o4-UEa"/>
+                            <constraint firstItem="fzk-Ba-bhf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="zbY-8S-qYd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="giV-Gs-Ept"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="grayView" destination="fzk-Ba-bhf" id="KsL-hr-dys"/>
+                        <outlet property="heightGrayView" destination="tip-o4-UEa" id="yHZ-nl-HaW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
