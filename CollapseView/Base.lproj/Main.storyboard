@@ -79,8 +79,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bottomGrayView" destination="jW8-kM-HZC" id="MPz-7d-SEf"/>
                         <outlet property="grayView" destination="fzk-Ba-bhf" id="KsL-hr-dys"/>
                         <outlet property="heightGrayView" destination="tip-o4-UEa" id="yHZ-nl-HaW"/>
+                        <outlet property="optionsCameraView" destination="p8w-r3-5bK" id="sSk-ot-2qs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

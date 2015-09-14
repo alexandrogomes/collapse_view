@@ -14,27 +14,39 @@
 
 @property (weak, nonatomic) IBOutlet UIView *grayView;
 @property (assign) BOOL isOpened;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomGrayView;
 
+@property (weak, nonatomic) IBOutlet UIView *optionsCameraView;
 @end
 
 @implementation SendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.optionsCameraView.alpha = 0;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)actionCollapse:(id)sender {
-    if (!self.isOpened)
-        self.heightGrayView.constant = (self.grayView.frame.size.height -50) * -1;
-    else
-        self.heightGrayView.constant = 0;
     
+    if (!self.isOpened) {
+        self.bottomGrayView.constant = (self.grayView.frame.size.height -50) * -1;
+    }
+    else {
+        self.bottomGrayView.constant = 0;
+    }
+    
+    [UIView animateWithDuration:0.75 animations:^{
+        if (!self.isOpened)
+            self.optionsCameraView.alpha = 1;
+        else
+            self.optionsCameraView.alpha = 0;
+        
+        [self.view layoutIfNeeded];
+    }];
     self.isOpened = !self.isOpened;
 }
 
